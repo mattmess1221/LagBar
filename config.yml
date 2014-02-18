@@ -1,0 +1,6 @@
+
+# Enables or Disables the lagbar.
+lag-enable: true
+
+# How often to refresh the lagbar.
+lag-refresh: 20
