@@ -1,0 +1,36 @@
+name: LagBar
+main: mattmess.lagbar.LagBar
+version: 1.0
+author: Matthew Messinger
+commands:
+  lagbar:
+    description: The main command for LagBar
+    usage: /lagbar <toggle [player]/reload>
+permissions:
+  lagbar.*:
+    description: Everything LagBar.
+    default: op
+    children:
+      lagbar.toggle: true
+      lagbar.toggle.others: true
+      lagbar.reload: true
+      lagbar.autoenable: true
+  lagbar.use:
+    description: Allows basic use.
+    default: op
+    children:
+      lagbar.toggle: true
+      lagbar.autoenable: true
+  lagbar.toggle:
+    description: Toggle the bar on/off.
+    default: op
+  lagbar.toggle.others:
+    description: Toggle others tps bar.
+    default: op
+  lagbar.reload:
+    description: Reloads the config. Currently does nothing.
+    default: op
+  lagbar.autoenable:
+    description: Enable the bar on login.
+    default: op
+depend: [LagMeter]
